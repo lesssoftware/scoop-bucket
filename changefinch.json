@@ -1,0 +1,25 @@
+{
+    "version": "0.1.0",
+    "tag_prefix": "changefinch-v",
+    "description": "Publish changelog entries from the terminal",
+    "homepage": "https://github.com/lesssoftware/releases",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/lesssoftware/releases/releases/download/changefinch-v0.1.0/changefinch-v0.1.0-windows-x86_64.zip",
+            "hash": "4f9c2421a167fc64c8bd6ae030ab395e5ab83a82eae755b4d3809bfbdf2f9f2b"
+        }
+    },
+    "bin": "changefinch.exe",
+    "checkver": {
+        "github": "https://github.com/lesssoftware/releases",
+        "regex": "changefinch-v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/lesssoftware/releases/releases/download/changefinch-v$version/changefinch-v$version-windows-x86_64.zip"
+            }
+        }
+    }
+}
